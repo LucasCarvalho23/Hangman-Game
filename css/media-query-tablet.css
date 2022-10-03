@@ -1,0 +1,140 @@
+/* Others Medias */
+
+/* 
+    Typical Device Breakpoints:
+        Small Screen: Up to 600px
+        Phone: 600px to 768px
+        Tablet: 768px to 992px
+        Desktop: 992px to 1200px
+        Big Screen: over 1200px
+*/
+
+
+@charset "UTF-8";
+
+/* TABLET*/
+
+@media screen and (min-width: 768px) and (max-width: 992px) { 
+
+    body {
+        background: linear-gradient(to top, rgb(117, 171, 252),rgb(200, 221, 253));
+    }
+
+    main {
+        margin: auto;
+        width: 85%;
+    }
+
+
+    /* START AND TIP */
+
+    .container-hangman-buttons-class {
+        display: inline;
+        
+    }
+
+    .letterJ-class {
+        position: static;
+        background-color: lightgray;
+        font-size: 30px;
+        text-transform: uppercase;
+        width: 60px;
+        margin-top: 20px;
+    }
+    
+    .letterJ-class:hover {
+        background-color: white;
+        transition: background .4s;
+    }
+
+    .container-hangman-class {
+        text-align: left;
+    }
+    
+    
+    /* BUTTONS */
+    
+    #insertLetter-button-id, #tipLetter-button-id {
+        font-family: Arial, Helvetica, sans-serif;
+        width: 60px;
+        height: 40px;
+        cursor: pointer;
+    }
+    
+    #insertLetter-button-id {
+        background-color: rgb(121, 121, 252);
+    }
+    
+    #insertLetter-button-id:hover {
+        background-color: rgb(69, 69, 252);
+        color: white;
+        transition: background .4s;
+    }
+    
+    #tipLetter-button-id {
+        background-color: rgb(250, 129, 129);
+    }
+    
+    #tipLetter-button-id:hover {
+        background-color: rgb(252, 70, 70);
+        color: white;
+        transition: background .4s;
+    }
+
+
+    /* DRAWING */
+
+#background-draw-id {
+    /*background-color: rgb(200, 221, 253);*/
+    background-color: rgb(75, 129, 50);
+    width: 100%;
+    height: 350px;
+    margin-bottom: 20px;
+    left: 100px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.418);
+}
+
+#hanging-img-id {
+    position: absolute;
+    height: 300px;
+    top: 500px;
+    left: 200px;
+}
+
+#head-img-id {
+    position: absolute;
+    top: 570px;
+    left: 415px;
+}
+
+#body-img-id {
+    position: absolute;
+    top: 630px;
+    left: 449px;
+}
+
+#right-arm-img-id {
+    position: absolute;
+    top: 655px;
+    left: 381px;
+}
+
+#left-arm-img-id {
+    position: absolute;
+    top: 648px;
+    left: 463px;
+}
+
+#right-leg-img-id {
+    position: absolute;
+    top: 691px;
+    left: 422px;
+}
+
+#left-leg-img-id {
+    position: absolute;
+    top: 701px;
+    left: 458px;
+}
+
+}

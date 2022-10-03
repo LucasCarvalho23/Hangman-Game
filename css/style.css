@@ -3,6 +3,7 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -129,7 +130,7 @@ header > h1 {
 /* MESSENGER */
 #container-hangman-messenger-id, #container-hangman-letterTyped-id { 
     text-align: left;
-    margin-top: 20px;
+    margin: 20px 0px 0px 10px;
     font-weight: bold;
 }
 
@@ -142,47 +143,55 @@ header > h1 {
 
 #background-draw-id {
     /*background-color: rgb(200, 221, 253);*/
-    background-color: black;
-    width: 400px;
-    height: 400px;
+    background-color: rgb(75, 129, 50);
+    width: 100%;
+    height: 350px;
     margin-bottom: 20px;
     left: 100px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.418);
+}
+
+#hanging-img-id {
+    position: absolute;
+    height: 300px;
+    top: 500px;
+    left: 30px;
 }
 
 #head-img-id {
     position: absolute;
-    top: 400px;
-    left: 30px;
+    top: 570px;
+    left: 245px;
 }
 
 #body-img-id {
     position: absolute;
-    top: 415px;
-    left: 85px;
+    top: 630px;
+    left: 279px;
 }
 
 #right-arm-img-id {
     position: absolute;
-    top: 450px;
-    left: 12px;
+    top: 655px;
+    left: 211px;
 }
 
 #left-arm-img-id {
     position: absolute;
-    top: 450px;
-    left: 90px;
+    top: 648px;
+    left: 293px;
 }
 
 #right-leg-img-id {
     position: absolute;
-    top: 470px;
-    left: 27px;
+    top: 691px;
+    left: 252px;
 }
 
 #left-leg-img-id {
     position: absolute;
-    top: 450px;
-    left: 90px;
+    top: 701px;
+    left: 288px;
 }
 
 
