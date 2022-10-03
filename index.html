@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Hangman</title>
+</head>
+<body>
+    
+    <header>
+        <h1> Hangman </h1>
+    </header>
+
+    <main>
+
+        <div class = "container-top-class" id = "container-top-id">
+                <button id = "button-start-id" onclick = "startGame()">Start</button>
+        </div>
+
+
+        <div class = "container-letter-class" id = "container-letter-id">
+            <input type = "text" class = "letter-class" id = "letter0-id" maxlength = "1">
+            <input type = "text" class = "letter-class" id = "letter1-id" maxlength = "1">
+            <input type = "text" class = "letter-class" id = "letter2-id" maxlength = "1">
+            <input type = "text" class = "letter-class" id = "letter3-id" maxlength = "1">
+            <input type = "text" class = "letter-class" id = "letter4-id" maxlength = "1">
+            <input type = "text" class = "letter-class" id = "letter5-id" maxlength = "1">
+            <input type = "text" class = "letter-class" id = "letter6-id" maxlength = "1">
+            <input type = "text" class = "letter-class" id = "letter7-id" maxlength = "1">
+            <input type = "text" class = "letter-class" id = "letter8-id" maxlength = "1">
+            <input type = "text" class = "letter-class" id = "letter9-id" maxlength = "1">
+            <input type = "text" class = "letter-class" id = "letter10-id" maxlength = "1">
+            <input type = "text" class = "letter-class" id = "letter11-id" maxlength = "1">
+            <input type = "text" class = "letter-class" id = "letter12-id" maxlength = "1">
+            <input type = "text" class = "letter-class" id = "letter13-id" maxlength = "1">
+            <input type = "text" class = "letter-class" id = "letter14-id" maxlength = "1">
+            <input type = "text" class = "letter-class" id = "letter15-id" maxlength = "1">
+            <input type = "text" class = "letter-class" id = "letter16-id" maxlength = "1">
+            <input type = "text" class = "letter-class" id = "letter17-id" maxlength = "1">
+            <input type = "text" class = "letter-class" id = "letter18-id" maxlength = "1">
+            <input type = "text" class = "letter-class" id = "letter19-id" maxlength = "1">
+        </div>
+
+        <div class = "container-hangman-class" id = "container-hangman-id">
+            <div class = "container-hangman-buttons-class" id = "container-hangman-buttons-id">
+                <input type = "text" class = "letterJ-class" id = "letterJ-id" maxlength = "1">
+                <button id = "insertLetter-button-id" onclick = "insertLetter()"> Insert </button>
+                <button id = "tipLetter-button-id" onclick = "tipLetter()"> Tip </button>
+                <div id = "container-hangman-messenger-id">MENSAGEM</div>
+                <div id = "container-hangman-letterTyped-id">Letter typed: </div>
+            </div>
+<!--
+            <div id = "container-hangman-draw-id">
+                <img src = "./images/head.png" alt = "head-img" id = "head-img-id">
+                <img src = "./images/body.png" alt = "body-img" id = "body-img-id">
+                <img src = "./images/right-arm.png" alt = "right-arm-img" id = "right-arm-img-id">
+                <img src = "./images/left-arm.png" alt = "left-arm-img" id = "left-arm-img-id">
+                <img src = "./images/right-leg.png" alt = "right-leg-img" id = "right-leg-img-id">
+                <img src = "./images/left-leg.png" alt = "left-leg-img" id = "left-leg-img-id">
+            </div>
+-->
+        </div>
+
+        <div id = "background-draw-id"></div>
+
+    </main>
+
+    <footer>
+        <p>
+            &copy Create by Lucas Carvalho
+        </p>
+    </footer>
+
+</body>
+</html>
