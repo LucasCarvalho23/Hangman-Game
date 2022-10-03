@@ -67,9 +67,7 @@ header > h1 {
     text-transform: uppercase;
     text-align: center;
     margin: 5px;
-    /*
     display: none;
-    */
 }
 
 .container-hangman-buttons-class {
