@@ -7,12 +7,16 @@ class Hangman {
 
         this.totalWords = this.library.length
         this.randomNumber = Math.round(Math.random() * this.totalWords)
-        this.letterArray = []
+        this.letterTyped = document.querySelector ("#container-hangman-letterTyped-id")
+        this.hangmanMessenger = document.querySelector ("#container-hangman-messenger-id")
         this.letterJ = document.querySelector("#letterJ-id")
         this.gameOpen = false 
         this.arrayFinal = []
         this.drawing = []
+        this.letterArray = []
+        this.arrayRepeat = []
         this.hit = 0
+        this.countArray = 0
         
         this.declarationDrawing()
         this.initialPosition()
@@ -110,10 +114,12 @@ class Hangman {
     compareValues() {
         
         this.count3 = 0
+        this.letterTypedJ 
 
         for (this.textCompare of this.arrayFinal) {
             if (this.letterJ.value == this.textCompare || this.letterJ.value.toLowerCase() == this.textCompare) {
                 console.log (this.letterJ.value)
+                this.hangmanMessenger.innerHTML = `You hit. Congratulation and go on.`
                 this.count3++
             } else {
                 console.log ('wrong')
@@ -121,15 +127,23 @@ class Hangman {
             }    
         }
 
+        this.letterTypedJ = this.letterJ.value
+
+        this.arrayRepeat[this.countArray] = this.letterJ.value
+        this.countArray++
+
         this.letterJ.value = ""
 
         if (this.hit < 7 && this.count3 == 0) {
             this.hit++
             this.drawing[this.hit].style.display = "inline-block"
+            this.hangmanMessenger.innerHTML = `You wrong. Try again!`
+            this.letterTyped.innerHTML += this.letterTypedJ.toUpperCase() + ' '
+            console.log (this.arrayRepeat)
         } 
         
         if (this.hit == 7) {
-            console.log ("End Game")
+            this.hangmanMessenger.innerHTML = `END GAME!`
             this.gameOpen = false 
         }
 
