@@ -54,7 +54,7 @@ header > h1 {
 
 .container-letter-class {
     display: grid;
-    grid-template-columns: repeat(7, 60px);
+    grid-template-columns: repeat(4, 60px);
     grid-template-rows: repeat(3, 50px);
     justify-content: center;
     align-content: center;
@@ -75,7 +75,8 @@ header > h1 {
 }
 
 .letterJ-class {
-    position: absolute;    
+    position: absolute; 
+    text-align: center;   
     background-color: lightgray;
     font-size: 30px;
     text-transform: uppercase;
