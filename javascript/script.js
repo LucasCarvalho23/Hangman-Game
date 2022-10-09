@@ -51,6 +51,7 @@ class Hangman {
     }
 
     startGame() {
+        this.hangmanMessenger.innerHTML = ` `
         this.gameOpen = true 
         this.wordChoiced = this.library[this.randomNumber]
         this.totalCharWordChoiced = this.library[this.randomNumber].length
@@ -84,6 +85,16 @@ class Hangman {
         while (this.count2 <= this.widthCube) {
             this.letterArray[this.count2].style.display = "inline-block"        
             this.count2++
+        }
+    }
+
+
+    // Delete cubes created
+    deleteCubes() {
+        this.count4 = 1
+        while (this.count4 <= this.widthCube) {
+            this.letterArray[this.count4].style.display = "none"        
+            this.count4++
         }
     }
 
@@ -134,19 +145,20 @@ class Hangman {
 
         this.letterJ.value = ""
 
-        if (this.hit < 7 && this.count3 == 0) {
+        if (this.hit < 6 && this.count3 == 0) {
             this.hit++
             this.drawing[this.hit].style.display = "inline-block"
             this.hangmanMessenger.innerHTML = `You wrong. Try again!`
             this.letterTyped.innerHTML += this.letterTypedJ.toUpperCase() + ' '
             console.log (this.arrayRepeat)
-        } 
-        
-        if (this.hit == 7) {
+        } else if (this.hit >= 6) {
+            this.initialPosition()
+            this.deleteCubes()
+            this.letterTyped.innerHTML = `Letter typed: `
             this.hangmanMessenger.innerHTML = `END GAME!`
+            alert ('End game. Play again!')
             this.gameOpen = false 
         }
-
     }
 
 
