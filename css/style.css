@@ -163,6 +163,12 @@ header > h1 {
     left: 245px;
 }
 
+#head-head-img-id {
+    position: absolute;
+    top: 570px;
+    left: 245px;
+}
+
 #body-img-id {
     position: absolute;
     top: 630px;
