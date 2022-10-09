@@ -31,8 +31,6 @@ class Hangman {
         this.insertCubes()
 
         this.letterJ.focus()
-        
-        console.log (this.letterArray[0].value)
 
     }
 
