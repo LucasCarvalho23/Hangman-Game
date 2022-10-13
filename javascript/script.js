@@ -105,6 +105,8 @@ class Hangman {
             alert ("You should start the game.")
         } else if (this.letterJ.value.length == 0) {
             alert ("You should typed a letter")
+            this.letterJ.value = ""
+            this.letterJ.focus()
         } else {
             this.arrayFinal = this.wordChoiced.split('')
             this.receiveValues()
@@ -125,7 +127,21 @@ class Hangman {
     compareValues() {
         
         this.count3 = 0
-        this.letterTypedJ 
+        this.letterTypedJ
+        this.validator = true 
+
+        //for (this.textCompare of this.arrayFinal) {
+            for (this.textCompare2 of this.arrayRepeat) {
+                if (this.textCompare2 == this.letterJ.value) {
+                    alert ('You already typed this letter. Typed another.')
+                    this.letterJ.value = ""
+                    this.letterJ.focus()
+                    this.validator = false 
+                }  
+            }
+        //}
+
+        if (this.validator == true) {
 
         for (this.textCompare of this.arrayFinal) {
             if (this.letterJ.value == this.textCompare || this.letterJ.value.toLowerCase() == this.textCompare) {
@@ -150,6 +166,8 @@ class Hangman {
             this.drawing[this.hit].style.display = "inline-block"
             this.hangmanMessenger.innerHTML = `You wrong. Try again!`
             this.letterTyped.innerHTML += this.letterTypedJ.toUpperCase() + ' '
+            this.letterJ.value = ""
+            this.letterJ.focus()
             console.log (this.arrayRepeat)
         } else if (this.hit >= 6) {
             this.initialPosition()
@@ -159,7 +177,11 @@ class Hangman {
             alert ('End game. Play again!')
             this.gameOpen = false 
         }
-    }
+        } else {
+            this.letterJ.value = ""
+            this.letterJ.focus()
+        }
+    }    
 
 
     // Tip on alert
