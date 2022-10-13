@@ -17,7 +17,7 @@ class Hangman {
         this.arrayRepeat = []
         this.hit = 0
         this.countArray = 0
-        
+
         this.declarationDrawing()
         this.initialPosition()
 
@@ -48,6 +48,7 @@ class Hangman {
         this.drawing[4].style.display = "none"
         this.drawing[5].style.display = "none"
         this.drawing[6].style.display = "none"
+
     }
 
     startGame() {
@@ -130,56 +131,66 @@ class Hangman {
         this.letterTypedJ
         this.validator = true 
 
-        //for (this.textCompare of this.arrayFinal) {
-            for (this.textCompare2 of this.arrayRepeat) {
-                if (this.textCompare2 == this.letterJ.value) {
-                    alert ('You already typed this letter. Typed another.')
-                    this.letterJ.value = ""
-                    this.letterJ.focus()
-                    this.validator = false 
-                }  
-            }
-        //}
+        for (this.textCompare2 of this.arrayRepeat) {
+            if (this.textCompare2 == this.letterJ.value) {
+                alert ('You already typed this letter. Typed another.')
+                this.letterJ.value = ""
+                this.letterJ.focus()
+                this.validator = false 
+            }  
+        }
 
         if (this.validator == true) {
 
-        for (this.textCompare of this.arrayFinal) {
-            if (this.letterJ.value == this.textCompare || this.letterJ.value.toLowerCase() == this.textCompare) {
-                console.log (this.letterJ.value)
-                this.hangmanMessenger.innerHTML = `You hit. Congratulation and go on.`
-                this.count3++
-            } else {
-                console.log ('wrong')
+            for (this.textCompare of this.arrayFinal) {
+                if (this.letterJ.value == this.textCompare || this.letterJ.value.toLowerCase() == this.textCompare) {
+                    console.log (this.letterJ.value)
+                    this.hangmanMessenger.innerHTML = `You hit. Congratulation and go on.`
+                    this.count3++
+                } else {
+                    console.log ('wrong')
+                    this.letterJ.focus()
+                }    
+            }
+
+            this.letterTypedJ = this.letterJ.value
+
+            this.arrayRepeat[this.countArray] = this.letterJ.value
+            this.countArray++
+
+            this.letterJ.value = ""
+
+            if (this.hit < 6 && this.count3 == 0) {
+                this.hit++
+                this.drawing[this.hit].style.display = "inline-block"
+                this.hangmanMessenger.innerHTML = `You wrong. Try again!`
+                this.letterTyped.innerHTML += this.letterTypedJ.toUpperCase() + ' '
+                this.letterJ.value = ""
                 this.letterJ.focus()
-            }    
-        }
-
-        this.letterTypedJ = this.letterJ.value
-
-        this.arrayRepeat[this.countArray] = this.letterJ.value
-        this.countArray++
-
-        this.letterJ.value = ""
-
-        if (this.hit < 6 && this.count3 == 0) {
-            this.hit++
-            this.drawing[this.hit].style.display = "inline-block"
-            this.hangmanMessenger.innerHTML = `You wrong. Try again!`
-            this.letterTyped.innerHTML += this.letterTypedJ.toUpperCase() + ' '
-            this.letterJ.value = ""
-            this.letterJ.focus()
-            console.log (this.arrayRepeat)
-        } else if (this.hit >= 6) {
-            this.initialPosition()
-            this.deleteCubes()
-            this.letterTyped.innerHTML = `Letter typed: `
-            this.hangmanMessenger.innerHTML = `END GAME!`
-            alert ('End game. Play again!')
-            this.gameOpen = false 
-        }
+                console.log (this.arrayRepeat)
+            } else if (this.hit >= 6) {
+                this.initialPosition()
+                this.deleteCubes()
+                this.letterTyped.innerHTML = `Letter typed: `
+                this.hangmanMessenger.innerHTML = `END GAME!`
+                alert ('End game. Play again!')
+                this.gameOpen = false 
+                this.randomNumber = Math.round(Math.random() * this.totalWords)
+                
+                this.arrayFinal = []
+                this.letterArray = []
+                this.arrayRepeat = []
+                this.hit = 0
+                this.countArray = 0
+                
+                this.initialPosition()
+            }
+        
         } else {
+            
             this.letterJ.value = ""
             this.letterJ.focus()
+
         }
     }    
 
