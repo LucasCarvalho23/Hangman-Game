@@ -13,10 +13,11 @@ class Hangman {
         this.gameOpen = false 
         this.arrayFinal = []
         this.drawing = []
-        this.letterArray = []
         this.arrayRepeat = []
         this.hit = 0
         this.countArray = 0
+        this.countHits = 0
+        this.letterArray = []
 
         this.declarationDrawing()
         this.initialPosition()
@@ -147,8 +148,8 @@ class Hangman {
                     console.log (this.letterJ.value)
                     this.hangmanMessenger.innerHTML = `You hit. Congratulation and go on.`
                     this.count3++
+                    this.countHits++
                 } else {
-                    console.log ('wrong')
                     this.letterJ.focus()
                 }    
             }
@@ -160,7 +161,16 @@ class Hangman {
 
             this.letterJ.value = ""
 
-            if (this.hit < 6 && this.count3 == 0) {
+            if (this.countHits == this.totalCharWordChoiced) {
+                this.hangmanMessenger.innerHTML = `YOU WIN. CONGRATULATIONS!`
+                this.initialPosition()
+                this.deleteCubes()
+                this.letterTyped.innerHTML = `Letter typed: `
+                alert ('You win. Do you wanna play again?')
+                this.gameOpen = false 
+                this.randomNumber = Math.round(Math.random() * this.totalWords)
+
+            } else if (this.hit < 6 && this.count3 == 0) {
                 this.hit++
                 this.drawing[this.hit].style.display = "inline-block"
                 this.hangmanMessenger.innerHTML = `You wrong. Try again!`

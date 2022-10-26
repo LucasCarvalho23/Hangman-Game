@@ -12,7 +12,7 @@ body {
 
 header > h1 {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin-top: 30px;
+    margin-top: 5px;
     text-align: center;
 }
 
@@ -20,7 +20,7 @@ header > h1 {
 /* BUTTON START */
 
 .container-top-class {
-    margin: 30px 5px;
+    margin: 10px 5px;
 }
 
 #button-start-id {
@@ -81,7 +81,7 @@ header > h1 {
     font-size: 30px;
     text-transform: uppercase;
     width: 60px;
-    top: 343px;
+    top: 278px;
     right: 130px;
 }
 
@@ -129,7 +129,7 @@ header > h1 {
 /* MESSENGER */
 #container-hangman-messenger-id, #container-hangman-letterTyped-id { 
     text-align: left;
-    margin: 20px 0px 0px 10px;
+    margin: 5px 0px 0px 10px;
     font-weight: bold;
 }
 
@@ -153,49 +153,49 @@ header > h1 {
 #hanging-img-id {
     position: absolute;
     height: 300px;
-    top: 500px;
+    top: 400px;
     left: 30px;
 }
 
 #head-img-id {
     position: absolute;
-    top: 570px;
+    top: 470px;
     left: 245px;
 }
 
 #head-head-img-id {
     position: absolute;
-    top: 570px;
+    top: 470px;
     left: 245px;
 }
 
 #body-img-id {
     position: absolute;
-    top: 630px;
+    top: 530px;
     left: 279px;
 }
 
 #right-arm-img-id {
     position: absolute;
-    top: 655px;
+    top: 555px;
     left: 211px;
 }
 
 #left-arm-img-id {
     position: absolute;
-    top: 648px;
+    top: 548px;
     left: 293px;
 }
 
 #right-leg-img-id {
     position: absolute;
-    top: 691px;
+    top: 591px;
     left: 252px;
 }
 
 #left-leg-img-id {
     position: absolute;
-    top: 701px;
+    top: 601px;
     left: 288px;
 }
 
